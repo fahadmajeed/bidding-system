@@ -1,4 +1,4 @@
-# Bidding Syste
+# Bidding System
 ## Tech stack
 
 I chose Angular version 6 as a client side application for this assignment. 
