@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title> {{article.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content >
+      <div *ngIf="article.bidWinner" class="winner">
+
+          Winner = {{article.bidWinner.name}} for {{article.bidWinner.value}}
+          Start price of Auction was {{article.startPrice}}
+      </div>
+
+      <div *ngIf="!article.bidWinner" class="loser"> 
+        Article ended unsuccessfully
+      </div>
+        
+      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+    
+  </mat-card>

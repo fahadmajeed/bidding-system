@@ -1,0 +1,8 @@
+.mat-grid-list {
+  margin-top: 100px;
+}
+.mat-grid-tile {
+    display: block;
+    position: absolute;
+    overflow: visible;
+}

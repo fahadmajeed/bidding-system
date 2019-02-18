@@ -1,0 +1,26 @@
+<div>
+    <h2>
+      Active Articles
+    </h2>
+    <div class="container m-4 p-4">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 text-center">
+
+          <mat-grid-list [cols]="breakpoint" rowHeight="2:0.5" (window:resize)="onResize($event)">
+              <mat-grid-tile *ngFor="let article of articles">
+  
+                  <app-article-detail 
+                    [article]="article" 
+                    [currentUser]="currentUser"
+                    (setBid)="setBidParent($event)"
+                  >
+                </app-article-detail>
+  
+              </mat-grid-tile>
+             
+          </mat-grid-list>    
+        </div>
+      </div>
+        
+    </div>  
+</div>

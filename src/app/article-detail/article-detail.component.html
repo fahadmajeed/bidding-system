@@ -1,0 +1,32 @@
+<div >
+  <mat-card class="example-card" *ngIf="showMe" >
+    <mat-card-header>
+      <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form">
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                  Current Price: {{currentPrice}} <br />
+                  Remaining Time: {{remainingTime}}
+                </td>
+              </tr>
+          <tr >
+            <td>
+              <mat-form-field class="example-full-width" >
+                <input matInput placeholder="Bid" [disabled]="!disableBidding" [(ngModel)]="bid" name="bid" required>
+                <span class="text-danger" *ngIf="!disableBidding">You can't place bid on your own item</span>
+              </mat-form-field>
+            </td>
+          </tr>
+          
+      </table>
+      </form>
+      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+    <mat-card-actions>
+      <button  mat-raised-button (click)="placeBid()" [disabled]="!disableBidding" color="primary">Place my bid</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
